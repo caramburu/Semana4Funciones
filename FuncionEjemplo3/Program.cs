@@ -16,6 +16,7 @@ namespace FuncionEjemplo3
             Console.WriteLine("MENU TABLAS DE OPERACIÓN");
             Console.WriteLine("1. SUMA");
             Console.WriteLine("2. MULTIPLICACIÓN");
+            Console.WriteLine("3. RESTA");
             Console.Write("Seleccione la opción a ejecutar:");
             Opcion = int.Parse(Console.ReadLine());           
             Console.Write("Registrar número a operar: ");
@@ -24,10 +25,16 @@ namespace FuncionEjemplo3
             if (Opcion == 1)
             {
                 Suma(Numero);
-            } else if (Opcion == 2)
+            }
+            else if (Opcion == 2)
             {
                 Multiplicar(Numero);
-            } else
+            }
+            else if (Opcion == 3)
+            {
+                Resta(Numero);
+            }
+            else
             {
                 Console.WriteLine("Opción inválida");
             }
@@ -47,6 +54,13 @@ namespace FuncionEjemplo3
             for (int i = 0; i <= 12; i++)
             {
                 Console.WriteLine(+Numero + " X " + i + " = " + (Numero * i));
+            }
+        }
+        static void Resta(int Numero)
+        {
+            for (int i = 0; i <= 12; i++)
+            {
+                Console.WriteLine(+Numero + " - " + i + " = " + (Numero - i));
             }
         }
     }
